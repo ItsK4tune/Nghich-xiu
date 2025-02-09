@@ -42,15 +42,12 @@ function handleNoClick() {
     const yesButton = document.querySelector('.yes-button');
     if (messageIndex < messages.length){
         noButton.textContent = messages[messageIndex];
-        messageIndex += 1;
-        const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-        yesButton.style.fontSize = `${currentSize * 1.2}px`;
+        messageIndex += 1;    
     }
-    else {
+    else 
         noButton.textContent = loopMessages[Math.floor(Math.random() * loopMessages.length) % loopMessages.length];
-        const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-        yesButton.style.fontSize = `${currentSize}px`;
-    }
+    const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+    yesButton.style.fontSize = `${currentSize * 1.2}px`;
 }
 
 function handleYesClick() {
